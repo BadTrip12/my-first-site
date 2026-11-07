@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ветка сакуры — салон красоты в Минске</title>
+<meta name="description" content="Салон красоты «Ветка сакуры»: маникюр, педикюр, ресницы, стрижки, косметология, массаж. Минск, ул. 50 лет Победы, 5А.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf4f6;--surface:#fff;--ink:#2a1a24;--muted:#6f5a66;--sakura:#eaa7bb;--rose:#a63d63;--bark:#4a2f33;--line:#ecd5de;--on-rose:#fff;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d121a;--surface:#291b25;--ink:#f6e8ee;--muted:#c3a9b6;--sakura:#e898b1;--rose:#e87ea0;--bark:#8a5a63;--line:#44303c;--on-rose:#2a1a24;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1d121a;--surface:#291b25;--ink:#f6e8ee;--muted:#c3a9b6;--sakura:#e898b1;--rose:#e87ea0;--bark:#8a5a63;--line:#44303c;--on-rose:#2a1a24;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Jost,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:Forum,Georgia,serif;font-weight:400;line-height:1.1;margin:0}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:.5rem}
+.lead{color:var(--muted);max-width:56ch;margin:0 0 2.2rem}
+section{padding:clamp(56px,9vw,110px) 0}
+
+/* hero */
+.hero{position:relative;min-height:92svh;display:flex;align-items:center;overflow:hidden;padding:0}
+.hero .wrap{position:relative;z-index:2;padding:96px 0 72px}
+.hero h1{font-size:clamp(3.4rem,13vw,9rem);letter-spacing:-.01em;max-width:9ch}
+.hero p{max-width:34ch;font-size:1.2rem;color:var(--muted);margin:1.4rem 0 2rem}
+.branch{position:absolute;right:-6%;top:0;width:min(78vw,760px);height:auto;z-index:1;opacity:.95}
+.petal{position:absolute;top:-30px;width:14px;height:10px;background:var(--sakura);border-radius:70% 0 70% 0;opacity:0;animation:fall 11s linear infinite}
+@keyframes fall{0%{opacity:0;transform:translate(0,0) rotate(0)}10%{opacity:.9}100%{opacity:0;transform:translate(-120px,100svh) rotate(520deg)}}
+@media (prefers-reduced-motion:reduce){.petal{display:none}html{scroll-behavior:auto}}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 26px;border-radius:999px;border:1.5px solid var(--rose);text-decoration:none;font-weight:500;transition:background .2s,color .2s}
+.btn.primary{background:var(--rose);color:var(--on-rose)}
+.btn:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+
+/* facts */
+.facts{display:flex;flex-wrap:wrap;gap:12px 40px;padding:26px 0;border-block:1px solid var(--line);background:var(--surface)}
+.facts div{display:flex;align-items:baseline;gap:10px}
+.facts b{font:400 2rem/1 Forum,serif;color:var(--rose)}
+.facts span{color:var(--muted);font-size:.95rem}
+
+/* services */
+.price-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.price-list li{display:grid;grid-template-columns:1fr auto;gap:4px 24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.price-list h3{font-size:1.6rem}
+.price-list small{grid-column:1;color:var(--muted);font-size:.95rem}
+.price-list .p{grid-row:1;grid-column:2;font:400 1.7rem Forum,serif;color:var(--rose);white-space:nowrap}
+.dirs{display:flex;flex-wrap:wrap;gap:10px;margin:2.4rem 0 0;padding:0;list-style:none}
+.dirs li{padding:8px 18px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.note{margin-top:1.6rem;color:var(--muted);font-size:.95rem}
+
+/* reviews */
+.reviews{background:var(--surface)}
+.rev{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.rev blockquote{margin:0;padding-left:20px;border-left:3px solid var(--sakura)}
+.rev p{margin:0 0 .7rem}
+.rev cite{font-style:normal;color:var(--muted);font-size:.92rem}
+
+/* contacts */
+.contact{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.contact h3{font-size:1.5rem;margin-bottom:.6rem}
+.contact p{margin:.2rem 0}
+.phone{font:400 clamp(1.8rem,5vw,2.6rem) Forum,serif;text-decoration:none;color:var(--rose)}
+footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg class="branch" viewBox="0 0 600 520" aria-hidden="true">
+    <defs>
+      <symbol id="b" viewBox="-30 -30 60 60">
+        <g fill="#eaa7bb">
+          <ellipse cx="0" cy="-14" rx="10" ry="15"/><ellipse cx="0" cy="-14" rx="10" ry="15" transform="rotate(72)"/>
+          <ellipse cx="0" cy="-14" rx="10" ry="15" transform="rotate(144)"/><ellipse cx="0" cy="-14" rx="10" ry="15" transform="rotate(216)"/>
+          <ellipse cx="0" cy="-14" rx="10" ry="15" transform="rotate(288)"/>
+        </g>
+        <circle r="5" fill="#a63d63"/>
+      </symbol>
+    </defs>
+    <path d="M610 20 C520 70 470 140 380 190 C300 235 210 250 130 330 C90 370 60 420 30 470" fill="none" stroke="#4a2f33" stroke-width="9" stroke-linecap="round"/>
+    <path d="M380 190 C350 150 330 110 340 60" fill="none" stroke="#4a2f33" stroke-width="5" stroke-linecap="round"/>
+    <path d="M250 245 C240 290 250 330 280 370" fill="none" stroke="#4a2f33" stroke-width="4" stroke-linecap="round"/>
+    <path d="M470 140 C500 175 540 190 575 185" fill="none" stroke="#4a2f33" stroke-width="4" stroke-linecap="round"/>
+    <use href="#b" x="320" y="30" width="64" height="64"/><use href="#b" x="440" y="100" width="56" height="56"/>
+    <use href="#b" x="540" y="150" width="60" height="60"/><use href="#b" x="360" y="160" width="70" height="70"/>
+    <use href="#b" x="230" y="205" width="62" height="62"/><use href="#b" x="250" y="340" width="58" height="58"/>
+    <use href="#b" x="120" y="290" width="66" height="66"/><use href="#b" x="40" y="400" width="52" height="52"/>
+    <use href="#b" x="150" y="380" width="46" height="46"/><use href="#b" x="470" y="40" width="44" height="44"/>
+  </svg>
+  <span class="petal" style="left:55%;animation-delay:0s"></span>
+  <span class="petal" style="left:68%;animation-delay:3.5s"></span>
+  <span class="petal" style="left:80%;animation-delay:6s"></span>
+  <span class="petal" style="left:42%;animation-delay:8.5s"></span>
+  <div class="wrap">
+    <h1>Ветка сакуры</h1>
+    <p>Салон красоты в Минске. Руки, ресницы, волосы, кожа — в одном спокойном месте.</p>
+    <div class="btns">
+      <a class="btn primary" href="tel:+375445485441">Записаться по телефону</a>
+      <a class="btn" href="#uslugi">Услуги и цены</a>
+    </div>
+  </div>
+</header>
+
+<div class="facts"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:12px 40px">
+  <div><b>4,9</b><span>рейтинг на Яндекс Картах</span></div>
+  <div><b>205</b><span>оценок гостей</span></div>
+  <div><b>5 мин</b><span>пешком от остановки «50 лет Победы»</span></div>
+</div></div>
+
+<section id="uslugi">
+  <div class="wrap">
+    <h2>Услуги и цены</h2>
+    <p class="lead">Часть популярных услуг с ценами. Остальное мастер назовёт при записи.</p>
+    <ul class="price-list">
+      <li><h3>Японский маникюр</h3><small>1 час</small><span class="p">45 Br</span></li>
+      <li><h3>Ламинирование и окрашивание ресниц</h3><small>75 минут. Уплотняет ресницы и придаёт изгиб, процедура сидя</small><span class="p">60 Br</span></li>
+      <li><h3>Бикини глубокое</h3><small>45 минут</small><span class="p">50 Br</span></li>
+      <li><h3>Женская стрижка</h3><small>цена зависит от длины и мастера</small><span class="p">45–100 Br</span></li>
+      <li><h3>Мужская стрижка</h3><small>&nbsp;</small><span class="p">30–40 Br</span></li>
+    </ul>
+    <ul class="dirs" aria-label="Другие направления">
+      <li>Маникюр</li><li>Педикюр</li><li>Коррекция и окрашивание бровей</li><li>Ресницы</li><li>Макияж</li>
+      <li>Чистки и пилинги</li><li>Лифтинг и антивозрастной уход</li><li>Массаж</li><li>Эпиляция</li><li>Косметология для мужчин</li><li>Пирсинг</li>
+    </ul>
+    <p class="note">Есть подарочные сертификаты. Оплата картой.</p>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <h2>Что говорят гости</h2>
+    <p class="lead">По отзывам на Яндекс Картах чаще всего хвалят мастеров и атмосферу.</p>
+    <div class="rev">
+      <blockquote><p>Стригусь у мастера уже семь лет. Качество всегда отличное, а в студии дружелюбный персонал.</p><cite>Денис Н.</cite></blockquote>
+      <blockquote><p>Чисто, аккуратно, мастера работают быстро и без лишних разговоров.</p><cite>Вячеслав Р.</cite></blockquote>
+      <blockquote><p>Уютное помещение, администратор и мастера приветливые. Накануне приходит SMS с напоминанием.</p><cite>Елена Д.</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="kontakty">
+  <div class="wrap">
+    <h2>Как нас найти</h2>
+    <p class="lead">Запись по телефону или в мессенджерах. Ответим и подберём время.</p>
+    <div class="contact">
+      <div>
+        <h3>Телефон</h3>
+        <p><a class="phone" href="tel:+375445485441">+375 44 548-54-41</a></p>
+        <div class="btns" style="margin-top:16px">
+          <a class="btn" href="https://t.me/+375445485441" rel="noopener">Telegram</a>
+          <a class="btn" href="https://viber.click/375445485441" rel="noopener">Viber</a>
+          <a class="btn" href="https://www.instagram.com/vetka_sakury_beauty" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div>
+        <h3>Адрес</h3>
+        <p>Минск, ул. 50 лет Победы, 5А, помещение 37</p>
+        <p>Остановка «50 лет Победы» в 390 м, метро «Уручье» в 2,2 км.</p>
+        <p style="margin-top:16px"><a class="btn primary" href="https://yandex.ru/maps/org/1354643855" rel="noopener">Построить маршрут</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">© Ветка сакуры, Минск</div></footer>
+</body>
+</html>
